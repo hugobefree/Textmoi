@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:testmoi/common/Data/DataSQlite.dart'; // Importez le bon fichier
+import 'package:flutter/material.dart';// Importez le bon fichier
 import 'package:testmoi/common/models/model.dart';
 
 class Homeview extends StatefulWidget {
@@ -16,17 +15,9 @@ class _HomeviewState extends State<Homeview> {
   @override
   void initState() {
     super.initState();
-    _loadData();
+   // _loadData();
   }
 
-  Future<void> _loadData() async {
-    await DatabaseHelper.insertUsersFromAPI();
-    _fetchUsersFromDatabase();
-  }
-
-void _fetchUsersFromDatabase() async {
-  users = await DatabaseHelper().getAllUsers();
-}
 
 
   @override
